@@ -8,7 +8,8 @@ export default function Home() {
     <main className="mx-auto w-full max-w-3xl px-6 py-20 sm:py-28">
       <Header
         name="Daria Doronina"
-        role="Senior Software Engineer · Barcelona, Spain"
+        role="Senior Software Engineer"
+        location="Barcelona, Spain"
         links={links}
       />
 

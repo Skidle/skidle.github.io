@@ -3,7 +3,7 @@ import { Entry } from "./components/EntryList";
 export const links = [
   { label: "GitHub", href: "https://github.com/Skidle" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/dariadoronina/" },
-  { label: "CV", href: "/daria_doronina_cv.pdf" },
+  { label: "CV", href: "/daria_doronina_cv.pdf", download: true },
 ];
 
 export const projects: Entry[] = [

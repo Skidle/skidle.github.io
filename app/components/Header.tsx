@@ -1,15 +1,18 @@
 type IdentityLink = {
   label: string;
   href: string;
+  download?: boolean;
 };
 
 export function Header({
   name,
   role,
+  location,
   links,
 }: {
   name: string;
   role: string;
+  location: string;
   links: IdentityLink[];
 }) {
   return (
@@ -19,6 +22,8 @@ export function Header({
       </h1>
       <p className="font-mono text-sm text-accent-secondary sm:text-base">
         {role}
+        <span className="hidden sm:inline"> &middot; </span>
+        <span className="block sm:inline">{location}</span>
       </p>
       <nav className="mt-2 flex flex-wrap gap-x-8 gap-y-2">
         {links.map((link) => {
@@ -29,6 +34,7 @@ export function Header({
               href={link.href}
               target={isExternal ? "_blank" : undefined}
               rel={isExternal ? "noopener noreferrer" : undefined}
+              download={link.download}
               className="font-mono text-lg text-foreground-muted underline decoration-foreground-muted/40 decoration-1 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent sm:text-xl"
             >
               {link.label}
