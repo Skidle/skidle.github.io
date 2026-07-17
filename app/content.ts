@@ -36,7 +36,10 @@ export const talks: Entry[] = [
 ];
 
 export const bio = {
-  text: "Originally from Russia, I moved to Europe in 2013 and called Prague home for twelve years before settling in Barcelona. I graduated in chemical engineering, then made the switch to programming in 2017. These days I speak Russian, English, Czech, and Spanish, and I'm working on picking up Catalan. Outside of work, I practice Muay Thai and enjoy exploring the city or getting out into nature.",
+  paragraphs: [
+    "Originally from Russia, I moved to Europe in 2013 and called Prague home for twelve years before settling in Barcelona. I graduated in chemical engineering, then made the switch to programming in 2017.",
+    "These days I speak Russian, English, Czech, and Spanish, and I'm working on picking up Catalan. Outside of work, I practice Muay Thai and enjoy exploring the city or getting out into nature.",
+  ],
   note: "If you've got something interesting to work on, I'd love to hear about it on",
   cta: "LinkedIn",
   ctaHref: "https://www.linkedin.com/in/dariadoronina/",

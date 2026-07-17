@@ -1,23 +1,34 @@
 export function About({
-  text,
+  paragraphs,
   note,
   cta,
   ctaHref,
 }: {
-  text: string;
+  paragraphs: string[];
   note: string;
   cta: string;
   ctaHref: string;
 }) {
   return (
     <section className="mt-14">
-      <h2 className="mb-4 border-b-2 border-foreground-muted/50 pb-3 font-mono text-sm font-medium uppercase tracking-widest text-foreground-muted sm:text-base">
-        About
-      </h2>
-      <p className="max-w-prose text-base leading-relaxed text-foreground-muted sm:text-lg">
-        {text}
-      </p>
-      <p className="mt-6 max-w-prose text-base leading-relaxed text-foreground-muted sm:text-lg">
+      <div className="mb-4">
+        <h2 className="font-mono text-sm font-medium uppercase tracking-widest text-foreground-muted sm:text-base">
+          About
+        </h2>
+        <span
+          aria-hidden="true"
+          className="mt-3 block h-0.5 w-full bg-foreground-muted/30"
+        />
+      </div>
+      {paragraphs.map((paragraph, index) => (
+        <p
+          key={index}
+          className={`text-base leading-[1.7] text-foreground-soft sm:text-lg ${index > 0 ? "mt-4" : ""}`}
+        >
+          {paragraph}
+        </p>
+      ))}
+      <p className="mt-6 text-base leading-relaxed text-foreground-muted sm:text-lg">
         {note}{" "}
         <a
           href={ctaHref}

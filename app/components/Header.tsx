@@ -20,7 +20,7 @@ export function Header({
       <h1 className="text-balance font-serif text-5xl font-normal tracking-tight sm:text-6xl">
         {name}
       </h1>
-      <p className="font-mono text-sm text-accent-secondary sm:text-base">
+      <p className="text-sm text-accent-secondary sm:text-base">
         {role}
         <span className="hidden sm:inline"> &middot; </span>
         <span className="block sm:inline">{location}</span>
@@ -35,7 +35,7 @@ export function Header({
               target={isExternal ? "_blank" : undefined}
               rel={isExternal ? "noopener noreferrer" : undefined}
               download={link.download}
-              className="font-mono text-lg text-foreground-muted underline decoration-foreground-muted/40 decoration-1 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent sm:text-xl"
+              className="text-lg text-foreground-muted underline decoration-foreground-muted/40 decoration-1 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent sm:text-xl"
             >
               {link.label}
             </a>
