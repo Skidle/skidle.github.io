@@ -15,10 +15,10 @@ export function EntryList({ items }: { items: Entry[] }) {
           rel="noopener noreferrer"
           className="group block"
         >
-          <div className="relative -mx-4 flex flex-col gap-1 rounded-lg px-4 py-5 transition-colors hover:bg-surface">
+          <div className="relative -mx-4 flex flex-col gap-1 rounded-lg px-4 py-5 transition-colors hover:bg-surface active:bg-surface">
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute inset-y-2 left-0 w-1 rounded-full bg-accent opacity-0 transition-opacity group-hover:opacity-100"
+              className="pointer-events-none absolute inset-y-2 left-0 w-1 rounded-full bg-accent opacity-0 transition-opacity group-hover:opacity-100 group-active:opacity-100"
             />
             <span className="text-xl font-semibold sm:text-2xl">
               {item.title}
