@@ -1,7 +1,8 @@
+import { About } from "./components/About";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Section } from "./components/Section";
-import { links, projects, writing } from "./content";
+import { links, projects, writing, talks, bio } from "./content";
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
 
       <Section title="Projects" items={projects} />
       <Section title="Writing" items={writing} />
+      <Section title="Talks" items={talks} />
+
+      <About {...bio} />
 
       <Footer name="Daria Doronina" year={2026} />
     </main>
