@@ -1,6 +1,7 @@
 import { Entry } from "./components/EntryList";
+import { IdentityLink } from "./components/Header";
 
-export const links = [
+export const links: IdentityLink[] = [
   { label: "GitHub", href: "https://github.com/Skidle" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/dariadoronina/" },
   { label: "CV", href: "/daria_doronina_cv.pdf", download: true },
@@ -13,9 +14,9 @@ export const projects: Entry[] = [
     meta: "A waitlist tool built with Next.js, TypeScript, and Supabase, with social auth, an embeddable signup widget, and Redis-backed rate limiting.",
   },
   {
-    title: "spotify-client",
+    title: "Spotify Client",
     href: "https://github.com/Skidle/spotify-client",
-    meta: "An example Redux app, built to teach Redux at a React Girls webinar.",
+    meta: "An example app, built to teach Redux at a React Girls webinar.",
   },
 ];
 

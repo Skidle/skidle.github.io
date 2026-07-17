@@ -1,4 +1,4 @@
-type IdentityLink = {
+export type IdentityLink = {
   label: string;
   href: string;
   download?: boolean;

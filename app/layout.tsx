@@ -13,10 +13,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dariadoronina.com"),
   title: "Daria Doronina",
-  description: "Senior Software Engineer",
+  description: "Senior Software Engineer based in Barcelona, Spain.",
   icons: {
     icon: "/icon.png",
+  },
+  openGraph: {
+    title: "Daria Doronina",
+    description: "Senior Software Engineer based in Barcelona, Spain.",
+    url: "https://dariadoronina.com",
+    siteName: "Daria Doronina",
+    images: ["/og-image.png"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Daria Doronina",
+    description: "Senior Software Engineer based in Barcelona, Spain.",
+    images: ["/og-image.png"],
   },
 };
 

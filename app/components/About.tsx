@@ -1,3 +1,5 @@
+import { SectionHeading } from "./SectionHeading";
+
 export function About({
   paragraphs,
   note,
@@ -11,23 +13,17 @@ export function About({
 }) {
   return (
     <section className="mt-14">
-      <div className="mb-4">
-        <h2 className="font-mono text-sm font-medium uppercase tracking-widest text-foreground-muted sm:text-base">
-          About
-        </h2>
-        <span
-          aria-hidden="true"
-          className="mt-3 block h-0.5 w-full bg-foreground-muted/30"
-        />
+      <SectionHeading>About</SectionHeading>
+      <div className="space-y-4">
+        {paragraphs.map((paragraph, index) => (
+          <p
+            key={index}
+            className="text-base leading-[1.7] text-foreground-soft sm:text-lg"
+          >
+            {paragraph}
+          </p>
+        ))}
       </div>
-      {paragraphs.map((paragraph, index) => (
-        <p
-          key={index}
-          className={`text-base leading-[1.7] text-foreground-soft sm:text-lg ${index > 0 ? "mt-4" : ""}`}
-        >
-          {paragraph}
-        </p>
-      ))}
       <p className="mt-6 text-base leading-relaxed text-foreground-muted sm:text-lg">
         {note}{" "}
         <a
