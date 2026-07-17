@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Daria Doronina",
   description: "Senior Software Engineer",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
